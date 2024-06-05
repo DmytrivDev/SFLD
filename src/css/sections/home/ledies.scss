@@ -1,18 +1,98 @@
+.ledies__section {
+    .section__heading {
+        h2 {
+            max-width: inherit;
+        }
+    }
+}
+
 .ledies__list {
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
     display: grid;
+
+    &.sm {
+        grid-template-columns: repeat(4, 1fr); 
+
+        .ledies {
+            padding-bottom: 23.625rem;
+        }
+
+        .ledies__top {        
+            h4 {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+        
+            p {
+                margin-top: 2rem;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                color: var(--ct2);
+                font-weight: 500;
+            }
+        }
+
+        .ledies__img {
+            height: 23.625rem;
+        }
+    }
 }
 
 @media screen and (max-width: 960px) {
     .ledies__list {
         grid-template-columns: repeat(2, 1fr);
+        &.sm {
+            grid-template-columns: repeat(3, 1fr); 
+            .ledies {
+                padding-bottom: 36vw;
+            }
+            .ledies__top {        
+                h4 {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+                p {
+                    margin-top: .5rem;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                }
+            }
+            .ledies__img {
+                height: 36vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .ledies__list {
+        display: flex;
+        flex-direction: column;
+        &.sm {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .ledies {
+                padding-bottom: 56vw;
+            }
+            .ledies__img {
+                height: 56vw;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 600px) {
     .ledies__list {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
+        &.sm {
+            .ledies {
+                padding-bottom: 0;
+            }
+            .ledies__img {
+                height: 32rem;
+            }
+        }
     }
 }

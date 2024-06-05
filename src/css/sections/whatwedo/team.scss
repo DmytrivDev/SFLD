@@ -2,6 +2,11 @@
     .section__footer {
         display: none !important
     }
+    .section__heading {
+        h2 {
+            max-width: inherit;
+        }
+    }
 }
 
 .team__list {

@@ -34,16 +34,16 @@ export const embedFunc = () => {
   }
 
   /////////
-  const embed = document.querySelector('.embed');
+  const videos = document.querySelectorAll('video');
 
-  if (embed) {
+  if (videos) {
     const videos = document.querySelectorAll('video');
 
     videos.forEach(el => {
       el.removeAttribute('controls');
     });
 
-    embed.addEventListener('click', playVideo);
+    window.addEventListener('click', playVideo);
 
     function playVideo(e) {
       const isVideo = e.target.classList.contains('wp-block-video');

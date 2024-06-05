@@ -8,6 +8,7 @@ import { embedFunc } from './parts/embed.js';
 import { relatedCar } from './parts/related.js';
 import { wwdFunc } from './parts/whatwedo.js';
 import { teamFunc } from './parts/team.js';
+import { progFunc } from './parts/program.js';
 
 headerFunc();
 mainCar();
@@ -17,6 +18,7 @@ embedFunc();
 relatedCar();
 wwdFunc();
 teamFunc();
+progFunc();
 
 const scrollUp = document.querySelector('.scrollUp');
 

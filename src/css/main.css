@@ -44,3 +44,10 @@
 
 /* Events */
 @import url('./sections/events/events.scss');
+
+/* Event */
+@import url('./sections/event/event.scss');
+@import url('./sections/event/plates.scss');
+@import url('./sections/event/program.scss');
+@import url('./sections/event/docs.scss');
+@import url('./sections/general/media.scss');
