@@ -1,10 +1,24 @@
 body {
 	/* Colors */
-	--ct: #484848; /* Text */
-	--ch: #252525; /* Heading */
+	--cm: #1F2129; /* Text */
+	--ct: #5F667E; /* Heading */
+	--ct2: #4E5468; /* Heading */
+	--cl: #9298AD; /* Light */
 	--cw: #FFF; /* White */
-	--cb: #037394; /* Blue */
+	--cbor: #EEF0F7; /* Border */
+	--cb: #7890FF; /* Blue */
+	--cp: #C38FFF; /* Purple */
+	--cg: #CED3E0; /* Gray */
+	--cbg: #F7F9FF; /* BG */
 
 	/* Fonts */
-	--ff: "Poppins", sans-serif;
+	--ff: "IBM Plex Sans", sans-serif;
+
+	/* Gradients */
+	--grfade: linear-gradient(180deg, rgba(31, 33, 41, 0.00) 0%, rgba(31, 33, 41, 0.80) 100%);
+	--grfade2: linear-gradient(180deg, rgba(31, 33, 41, 0.00) 0%, rgba(31, 33, 41, 0.48) 100%);
+
+	/* Shadow */
+	--s1: 0 .125rem 1.5rem 0 rgba(0, 0, 0, 0.12);
+	--sbtn: 0px .75rem 0.188rem 0px rgba(0, 0, 0, 0.00), 0px .5rem 0.188rem 0px rgba(0, 0, 0, 0.01), 0px .25rem 0.188rem 0px rgba(0, 0, 0, 0.05), 0px .125rem .125rem 0px rgba(0, 0, 0, 0.09), 0px 0px 0.063rem 0px rgba(0, 0, 0, 0.10);
 }

@@ -1,0 +1,94 @@
+.section_related {
+    overflow: hidden;
+}
+
+.related__carousell {
+    position: relative;
+
+    .splide__slide {
+        width: 26.5rem;
+    }
+
+    .splide__track {
+        overflow: visible;
+    }
+
+    .splide__arrows {
+        gap: .75rem;
+        top: -5.5rem;
+        right: 0;
+        left: auto;
+        width: auto;
+        position: absolute !important;
+        transform: none;
+        display: flex;
+        position: relative;
+        align-items: center;
+        align-content: center;
+
+        button {
+            width: 3rem !important;
+            height: 3rem !important;
+            background-size: 1.5rem !important;
+            position: static;
+            margin: 0 !important;
+            transform: none;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: transparent;
+            transition: 0.3s;
+            background-color: var(--cbg);
+            border-radius: 50%;
+            opacity: 1 !important;
+
+            svg {
+                display: none;
+            }
+
+            &:disabled {
+                transform: none !important;
+                box-shadow: none !important;
+                opacity: 0.7 !important;
+                cursor: inherit;
+            }
+
+            &:hover {
+                box-shadow: var(--s1);
+                transform: scale(0.8);
+            }
+
+            &.splide__arrow--prev {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 12L13.2973 4.5L15 6.25L9.40541 12L15 17.75L13.2973 19.5L6 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+
+            &.splide__arrow--next {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 12L10.7027 19.5L9 17.75L14.5946 12L9 6.25L10.7027 4.5L18 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .related__carousell { 
+        display: flex;
+        flex-direction: column;   
+        .splide__slide {
+            width: inherit;
+        }
+        .splide__arrows {
+            margin-top: 1.5rem;
+            gap: .5rem;
+            order: 1;
+            width: 100%;
+            justify-content: flex-end;
+            position: static !important;
+            button {
+                width: 2.75rem !important;
+                height: 2.75rem !important;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+        }
+    }
+}

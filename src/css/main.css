@@ -6,6 +6,41 @@
 
 /* Header */
 @import url('./sections/header/header.scss');
+@import url('./sections/header/navigation.scss');
+
+/* Home */
+@import url('./sections/home/main.scss');
+@import url('./sections/home/mission.scss');
+@import url('./sections/home/news.scss');
+@import url('./sections/general/newsitem.scss');
+@import url('./sections/home/summit.scss');
+@import url('./sections/home/ledies.scss');
+@import url('./sections/general/ledies.scss');
+@import url('./sections/home/future.scss');
+@import url('./sections/general/event.scss');
+@import url('./sections/home/gallery.scss');
+@import url('./sections/home/blog.scss');
+@import url('./sections/general/blogitem.scss');
+@import url('./sections/home/supports.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
+
+/* News */
+@import url('./sections/news/news.scss');
+
+/* Newspage */
+@import url('./sections/news/newspage.scss');
+@import url('./sections/general/embeded.scss');
+@import url('./sections/news/related.scss');
+
+/* History */
+@import url('./sections/history/history.scss');
+@import url('./sections/history/infogr.scss');
+
+/* What do we do */
+@import url('./sections/whatwedo/whatwedo.scss');
+@import url('./sections/whatwedo/team.scss');
+
+/* Events */
+@import url('./sections/events/events.scss');

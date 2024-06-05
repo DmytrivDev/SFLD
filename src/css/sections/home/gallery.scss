@@ -1,0 +1,84 @@
+.section__gallery {
+    overflow: hidden;
+
+    .section__content {
+        padding: 3.5rem 0;
+        background-color: var(--cbg);
+    }
+}
+
+.gallery__carousell {
+    .splide__track {
+        overflow: visible;
+    }
+
+    .splide__arrows {
+        .splide__arrow {
+            width: 3rem;
+            height: 3rem;
+            background-size: 1.5rem;
+            box-shadow: var(--sbtn);
+            background-color: var(--cw);
+            opacity: 1 !important;
+            top: 50%;
+            transform: translateY(-50%) scale(1);
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: .3s;
+
+            &:hover {
+                transform: translateY(-50%) scale(.9);
+            }
+
+            &.splide__arrow--prev {
+                left: -1.188rem;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 12L13.4865 5L15 6.63333L10.027 12L15 17.3667L13.4865 19L7 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+
+            &.splide__arrow--next {
+                right: -1.188rem;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M17 12L10.5135 19L9 17.3667L13.973 12L9 6.63333L10.5135 5L17 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+.gallery__inner {
+    padding-top: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        height: 9.75rem;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(238, 240, 247, 0) 0%, #eef0f7 100%);
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .section__gallery {
+        .section__content {
+            padding: 1rem 0;
+        }
+    }
+    .gallery__carousell {
+        margin-left: 4rem;
+    }
+    .gallery__inner {
+        border-radius: .5rem;
+        &::after {
+            height: 50%;
+        }
+    }
+}

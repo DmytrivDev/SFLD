@@ -1,0 +1,18 @@
+.ledies__list {
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+}
+
+@media screen and (max-width: 960px) {
+    .ledies__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ledies__list {
+        display: flex;
+        flex-direction: column;
+    }
+}

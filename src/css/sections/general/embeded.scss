@@ -1,0 +1,464 @@
+.embed {
+    color: var(--ct2);
+
+    & > * {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 2rem;
+        margin-top: 1.5em;
+        color: var(--cm);
+    }
+
+    a {
+        color: var(--cb);
+        text-decoration: underline !important;
+    }
+
+    .gutenberg__carousell {
+        margin: 3rem 0;
+        width: 100%;
+        max-width: inherit !important;
+        .splide__track {
+            overflow: hidden;
+        }
+
+        .splide__slide {
+            border-radius: 1rem;
+            padding-top: 49.3%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .splide__arrows.bottom__arrows {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            align-content: center;
+
+            button {
+                width: 3rem !important;
+                height: 3rem !important;
+                background-size: 1.5rem;
+                position: static;
+                margin: 0 !important;
+                transform: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-color: transparent;
+                transition: 0.3s;
+                background-color: var(--cbg);
+                border-radius: 50%;
+                opacity: 1 !important;
+
+                &:hover {
+                    box-shadow: var(--s1);
+                    transform: scale(0.8);
+                }
+
+                &.splide__arrow--prev {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 12L13.2973 4.5L15 6.25L9.40541 12L15 17.75L13.2973 19.5L6 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+                }
+
+                &.splide__arrow--next {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 12L10.7027 19.5L9 17.75L14.5946 12L9 6.25L10.7027 4.5L18 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+                }
+            }
+        }
+
+        .index-page {
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+    }
+
+    .wp-block-video {
+        border-radius: 0.5rem;
+        margin: 0;
+        margin-bottom: 3rem;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+
+        &.played {
+            &::after {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            figcaption {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        &::after {
+            background-size: 3rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: 1;
+            background-color: var(--ct);
+            opacity: 0.64;
+            position: absolute;
+            content: "";
+            cursor: pointer;
+            visibility: visible;
+            transition: 0.3s;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' fill='none'%3E%3Cpath d='M43.9669 20.8256L16.9519 4.30125C16.3853 3.95588 15.7373 3.767 15.0739 3.7539C14.4105 3.74081 13.7555 3.90396 13.1758 4.22671C12.5961 4.54946 12.1124 5.02025 11.774 5.59103C11.4357 6.16181 11.2549 6.81213 11.25 7.47563V40.5244C11.2549 41.1879 11.4357 41.8382 11.774 42.409C12.1124 42.9798 12.5961 43.4505 13.1758 43.7733C13.7555 44.096 14.4105 44.2592 15.0739 44.2461C15.7373 44.233 16.3853 44.0441 16.9519 43.6988L43.9669 27.1744C44.5116 26.8428 44.9618 26.3766 45.2743 25.8207C45.5867 25.2647 45.7508 24.6377 45.7508 24C45.7508 23.3623 45.5867 22.7353 45.2743 22.1794C44.9618 21.6234 44.5116 21.1572 43.9669 20.8256ZM15.75 39.1594V8.84063L40.53 24L15.75 39.1594Z' fill='white'/%3E%3C/svg%3E");
+        }
+
+        figcaption {
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: var(--cw);
+            font-family: var(--fn);
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            position: absolute;
+            z-index: 2;
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+        }
+    }
+
+    .downloads {
+        margin: 3rem 0;
+        margin-left: 0 !important;
+
+        li {
+            margin-bottom: 1rem !important;
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--cbor);
+            flex-wrap: nowrap !important;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            list-style: none !important;
+            align-items: center;
+            align-content: center;
+
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            div {
+                padding-right: 1rem;
+
+                span {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    font-weight: 500;
+                    display: block;
+                    color: var(--cm);
+                }
+            }
+
+            a {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-size: 1.25rem;
+                margin: 0 !important;
+                border-radius: 50%;
+                background-color: var(--cbg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10 13.1571L6.44229 9.59937L7.32063 8.69563L9.375 10.75V3.75H10.625V10.75L12.6794 8.69563L13.5577 9.59937L10 13.1571ZM5.25646 16.25C4.83549 16.25 4.47917 16.1042 4.1875 15.8125C3.89583 15.5208 3.75 15.1645 3.75 14.7435V12.484H5V14.7435C5 14.8077 5.02674 14.8665 5.08021 14.9198C5.13354 14.9733 5.19229 15 5.25646 15H14.7435C14.8077 15 14.8665 14.9733 14.9198 14.9198C14.9733 14.8665 15 14.8077 15 14.7435V12.484H16.25V14.7435C16.25 15.1645 16.1042 15.5208 15.8125 15.8125C15.5208 16.1042 15.1645 16.25 14.7435 16.25H5.25646Z' fill='%237890FF'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    blockquote {
+        padding-left: 1.5rem;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        border-left: 1px solid var(--cbor);
+
+        * {
+            color: var(--cm);
+        }
+
+        cite {
+            margin-top: 0.5rem;
+            font-weight: 600;
+            display: block;
+        }
+    }
+
+    ul,
+    ol {
+        margin-left: 1em;
+    }
+
+    ul {
+        li {
+            list-style: disc;
+        }
+    }
+
+    ol {
+        li {
+            list-style: decimal;
+        }
+    }
+
+    .wp-block-image {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin: 3rem 0;
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        &.size-full {
+            img {
+                width: 100%;
+            }
+        }
+
+        .alignleft,
+        .alignright {
+            margin: 0;
+            float: left;
+            max-width: calc(50% - 1.5rem);
+            width: 100%;
+            margin-right: 1.5rem;
+            margin-bottom: 3rem;
+
+            img {
+                display: inline-block;
+            }
+        }
+
+        .alignright {
+            float: right;
+            margin-right: 1.5rem;
+            margin-left: 0;
+            margin-bottom: 3rem;
+        }
+
+        .aligncenter {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        figcaption {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .wp-block-media-text {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        &.is-vertically-aligned-bottom {
+            align-content: flex-end;
+            align-items: flex-end;
+        }
+
+        &.is-vertically-aligned-center {
+            align-items: center;
+            align-content: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .wp-block-media-text__media {
+            margin: 0;
+            min-width: calc(50% - 1.5rem);
+            width: calc(50% - 1.5rem);
+        }
+    }
+
+    .clearfix {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .authorquote {
+        margin: 3rem 0;
+        padding: 1.5rem 0;
+        padding-left: 7rem;
+        border-top: 1px solid var(--cbor);
+        border-bottom: 1px solid var(--cbor);
+        position: relative;
+
+        &::before {
+            top: 1.5rem;
+            width: 4rem;
+            height: 4rem;
+            left: 0;
+            position: absolute;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' fill='none'%3E%3Cpath d='M16.3795 47.0767L22.6415 36.1793C22.4877 36.2647 22.3081 36.3245 22.1028 36.3587C21.8975 36.3929 21.6924 36.41 21.4875 36.41C18.7764 36.41 16.4746 35.4553 14.5821 33.546C12.6901 31.6367 11.7441 29.3436 11.7441 26.6667C11.7441 23.9556 12.6901 21.6538 14.5821 19.7613C16.4746 17.8693 18.7764 16.9233 21.4875 16.9233C24.1644 16.9233 26.4575 17.8693 28.3668 19.7613C30.2761 21.6538 31.2308 23.9556 31.2308 26.6667C31.2308 27.6036 31.1173 28.4753 30.8901 29.282C30.6626 30.0887 30.3299 30.858 29.8921 31.59L20.9741 47.0767H16.3795ZM40.0721 47.0767L46.3335 36.1793C46.1797 36.2647 46.0001 36.3245 45.7948 36.3587C45.5899 36.3929 45.3848 36.41 45.1795 36.41C42.4684 36.41 40.1668 35.4553 38.2748 33.546C36.3824 31.6367 35.4361 29.3436 35.4361 26.6667C35.4361 23.9387 36.3824 21.6327 38.2748 19.7487C40.1668 17.8651 42.4684 16.9233 45.1795 16.9233C47.8564 16.9233 50.1495 17.8693 52.0588 19.7613C53.9681 21.6538 54.9228 23.9556 54.9228 26.6667C54.9228 27.6036 54.8092 28.4753 54.5821 29.282C54.3546 30.0887 54.0221 30.858 53.5848 31.59L44.6668 47.0767H40.0721Z' fill='%237890FF'/%3E%3C/svg%3E");
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 500;
+            color: var(--cm);
+        }
+
+        .blogitem__author {
+            margin-top: 1.88rem;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .embed {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 1.5rem;
+        }
+        .gutenberg__carousell {
+            margin: 2.5rem 0;
+            .splide__slide {
+                border-radius: 0.5rem;
+                padding-top: 65.1%;
+            }
+            .splide__arrows.bottom__arrows {
+                margin-top: 1rem;
+                button {
+                    width: 2.75rem !important;
+                    height: 2.75rem !important;
+                    background-size: 1.25rem;
+                    transform: none !important;
+                }
+            }
+            .index-page {
+                font-size: 0.875rem;
+            }
+        }
+
+        .wp-block-video {
+            border-radius: 0.5rem;
+            margin-bottom: 2.5rem;
+            &::after {
+                background-size: 2.5rem;
+            }
+            figcaption {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+        .downloads {
+            margin: 2.5rem 0;
+            li {
+                padding: 1rem;
+            }
+        }
+        blockquote {
+            padding-left: 1rem;
+        }
+        .wp-block-image {
+            .alignleft,
+            .alignright {
+                margin-bottom: 1.5rem !important;
+            }
+            .aligncenter {
+                margin-bottom: 1.5rem !important;
+            }
+        }
+        .authorquote {
+            margin: 2.5rem 0;
+            padding-left: 0;
+            &::before {
+                width: 3rem;
+                height: 3rem;
+            }
+            .quote {
+                padding-left: 4rem;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+            .blogitem__author {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+    .embed {
+        .wp-block-image {
+            img {
+                width: 100% !important;
+                display: block;
+                height: auto;
+            }
+            .alignleft, .alignright {
+                float: none;
+                max-width: inherit !important;
+                display: block;
+                margin-right: 0;
+                margin: 0 !important;
+                margin-bottom: 1.5rem !important;
+            }
+            .aligncenter  {
+                margin-bottom: 1.5rem !important;
+            }
+        }
+        .wp-block-media-text {
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            .wp-block-media-text__media {
+                min-width: inherit;
+                width: 100%;
+            }
+        }
+    }
+}

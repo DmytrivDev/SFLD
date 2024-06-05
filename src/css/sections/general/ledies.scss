@@ -1,0 +1,90 @@
+.ledies {
+    border-radius: 0.75rem;
+    padding-bottom: 32rem;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cbg);
+}
+
+.ledies__top {
+    padding: 1rem;
+
+    p {
+        margin-top: 2.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: var(--cm);
+    }
+}
+
+.ledies__img {
+    height: 32rem;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::after {
+        height: 7.5rem;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        content: "";
+        background: var(--grfade2);
+    }
+}
+
+.ledies__country {
+    left: 1rem;
+    bottom: 1rem;
+    padding: .5rem .75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    gap: .5rem;
+    font-weight: 500;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--cbor);
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    .flag {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .ledies__top {
+        padding: 1rem .5rem;
+        h4 {
+            font-size: 1.125rem;
+        }
+        p {
+            margin-top: .5rem;
+        }
+    }
+    .ledies__img {
+        &::after {
+            height: 7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ledies {
+        padding-bottom: 0;
+    }
+    .ledies__img {
+        position: relative;
+        padding-top: 125%;
+        height: auto;
+    }
+}

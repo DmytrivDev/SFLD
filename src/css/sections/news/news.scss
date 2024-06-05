@@ -1,0 +1,224 @@
+.news__heading {
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-between;
+
+    h1, h2 {
+        max-width: 50%;
+    }
+}
+
+.filtercont {
+    gap: 1.5rem;
+    align-items: center;
+    align-content: center;
+}
+
+.nice-select.facetwp-dropdown {
+    width: 22rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+    border: 1px solid var(--cbor) !important;
+    background-color: var(--cbg);
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    .current {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        height: auto;
+        color: var(--cm);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &::after {
+        height: 1rem;
+        width: 1rem;
+        right: 1.5rem;
+        border: none;
+        margin-top: 0;
+        transform: translateY(-50%) rotate(0deg);
+        transform-origin: unset;
+        transition: all 0.3s ease-in-out;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8 12L3 7.13514L4.16667 6L8 9.72973L11.8333 6L13 7.13514L8 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+    }
+
+    &.open {
+        &::after {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    .nice-select-dropdown {
+        top: calc(100% + 0.5rem);
+        border-radius: 0.5rem;
+        box-shadow: var(--s1);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        background-color: var(--cw);
+
+        .list {
+            border-radius: 0.5rem;
+            max-height: 16rem;
+
+            li {
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 500;
+                border-bottom: 1px solid var(--cbor);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.filter__sort {
+    .facetwp-type-sort {
+        display: none;
+    }
+}
+
+.filter__sortctrl {
+    height: 3em;
+    width: 3rem;
+    border-radius: 50%;
+    background-size: 1.5em;
+    border: 1px solid var(--cbor) !important;
+    background-color: var(--cbg);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    &::after {
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: rotateX(0);
+        transition: 0.3s;
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 11.6098C4 12.8571 4.41983 13.9218 5.2595 14.8038C6.09933 15.6859 7.13975 16.1578 8.38075 16.2192H8.94825L7.302 14.5635L8.35575 13.5098L11.8365 17L8.35575 20.5L7.302 19.4462L8.979 17.75H8.4115C6.75133 17.6885 5.351 17.0664 4.2105 15.8837C3.07017 14.7009 2.5 13.2813 2.5 11.625C2.5 9.91733 3.09075 8.46958 4.27225 7.28175C5.45358 6.09392 6.89492 5.5 8.59625 5.5H11.8463V7H8.59625C7.32058 7 6.23558 7.44617 5.34125 8.3385C4.44708 9.23083 4 10.3213 4 11.6098ZM14.0385 17.75V16.25H21.5V17.75H14.0385ZM14.0385 12.375V10.875H21.5V12.375H14.0385ZM14.0385 7V5.5H21.5V7H14.0385Z' fill='%231F2129'/%3E%3C/svg%3E");
+    }
+
+    &.sorted {
+        &::after {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
+.pagination__cont {
+    .facetwp-facet-pagination, .custom-pagination {
+        display: flex;
+        justify-content: center;
+        .facetwp-pager, .custom-pager {
+            min-width: 26.5rem;
+            margin-top: 3.5rem;
+            padding: 0 3rem;
+            gap: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position: relative;
+
+            a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                min-width: 1.5rem;
+                text-align: center;
+                color: var(--cm);
+                font-weight: 500;
+                cursor: pointer;
+
+                &.dots {
+                    cursor: inherit;
+                }
+
+                &.active {
+                    color: var(--cl);
+                }
+
+                &.prev,
+                &.next {
+                    width: 2rem;
+                    height: 2rem;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                    font-size: 0;
+
+                    &.prev {
+                        left: 0;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M9.83067 17L17.4257 24.595L16 26L6 16L16 6L17.4257 7.405L9.83067 15H26V17H9.83067Z' fill='%231F2129'/%3E%3C/svg%3E");
+                    }
+
+                    &.next {
+                        right: 0;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M22.1693 15L14.5743 7.405L16 6L26 16L16 26L14.5743 24.595L22.1693 17L6 17L6 15L22.1693 15Z' fill='%231F2129'/%3E%3C/svg%3E");
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .news__heading {
+        display: block;
+        h1, h2 {
+            max-width: 100%;
+        }
+    }
+    .filtercont {
+        margin-top: 1rem;
+        gap: .75rem;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .filter__item.filter__news {
+        width: 100%;
+    }
+    .nice-select.facetwp-dropdown {
+        width: 100%;
+    }
+    .filter__sortctrl {
+        min-width: 3rem;
+    }
+    .pagination__cont {
+        .facetwp-facet-pagination, .custom-pagination {
+            .facetwp-pager, .custom-pager {
+                min-width: 21.5rem;
+                margin-top: 2.5rem;
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

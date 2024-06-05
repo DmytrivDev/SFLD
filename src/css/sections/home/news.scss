@@ -1,0 +1,20 @@
+.news__list {
+    gap: 1.5rem;
+    row-gap: 2.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 960px) { 
+    .news__list {
+        gap: 1rem;
+        row-gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .news__list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,144 @@
+.newspage__heading {
+    gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        max-width: 61.5rem;
+    }
+}
+
+.newspage__right {
+    gap: 1rem;
+    align-items: flex-end;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newspage__meta {
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    align-items: flex-end;
+    align-content: flex-end;
+    color: var(--ct);
+    display: flex;
+    flex-direction: column;
+}
+
+.newspage__container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.newspage__content {
+    max-width: 68.5rem;
+    width: 100%;
+}
+
+.newspage__img {
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.news__sharecont {
+    margin-top: 3rem;
+
+    section {
+        margin: 0;
+    }
+
+    & > span {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #353a4a;
+    }
+
+    .a2a_kit {
+        margin-top: 0.75rem;
+        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid var(--cg);
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+
+            img {
+                width: 1.5rem;
+                height: auto;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                background-color: var(--cb);
+                box-shadow: var(--s1);
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .newspage__heading {
+        gap: 1rem;
+        padding-bottom: 2.5rem;
+        position: relative;
+        flex-direction: column;
+        h1 {
+            max-width: inherit;
+            order: 2;
+        }
+    }
+    .newspage__right {
+        display: block;
+    }
+    .newspage__meta {
+        display: block;
+        span {
+            position: absolute;
+            bottom: 0;
+            &:nth-child(1) {
+                left: 0;
+            }
+            &:nth-child(2) {
+                right: 0;
+            }
+        }
+    }
+    .newspage__img {
+        border-radius: 0.75rem;
+        margin-bottom: 2.5rem;
+    }
+    .news__sharecont {
+        margin-top: 2.5rem;
+        section {
+            margin: 0;
+        }
+        .a2a_kit {
+            margin-top: 0.5rem;
+        }
+    }
+}
