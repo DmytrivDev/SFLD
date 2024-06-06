@@ -66,3 +66,6 @@
 
 /* Search */
 @import url('./sections/search/search.scss');
+
+/* Error */
+@import url('./sections/general/error.scss');
