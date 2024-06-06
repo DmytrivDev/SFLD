@@ -1,4 +1,5 @@
 import scrollToElement from 'scroll-to-element';
+import copy from 'copy-text-to-clipboard';
 
 import { headerFunc } from './parts/header.js';
 import { mainCar } from './parts/main.js';
@@ -27,6 +28,18 @@ scrollUp?.addEventListener('click', evt => {
 
   scrollToElement('body', {
     offset: 0,
-    duration: 1500
+    duration: 1500,
+  });
 });
+
+const copyBtn = document.querySelectorAll('.copy');
+copyBtn?.forEach(el => {
+  el.addEventListener('click', evt => {
+    evt.preventDefault();
+
+    const trg = evt.currentTarget;
+    const text = trg.dataset.copy;
+
+    copy(text);
+  });
 });

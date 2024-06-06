@@ -51,3 +51,9 @@
 @import url('./sections/event/program.scss');
 @import url('./sections/event/docs.scss');
 @import url('./sections/general/media.scss');
+
+/* Contact */
+@import url('./sections/contact/contact.scss');
+
+/* Media */
+@import url('./sections/media/media.scss');

@@ -1,0 +1,39 @@
+.section__media {
+    .section__heading {
+        margin-top: 8rem;
+    }
+}
+
+.media__list {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 960px) {
+    .section__media {
+        .section__heading {
+            margin-top: 6.25rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            h2 {
+                max-width: calc(100% - 4rem);
+            }
+            .filtercont {
+                width: auto;
+            }
+        }
+    }
+    .media__list {
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .media__list {
+        display: flex;
+        flex-direction: column;
+    }
+}
