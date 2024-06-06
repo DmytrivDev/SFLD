@@ -69,3 +69,6 @@
 
 /* Error */
 @import url('./sections/general/error.scss');
+
+/* Text */
+@import url('./sections/general/text.scss');
