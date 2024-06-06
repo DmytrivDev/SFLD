@@ -121,8 +121,15 @@ body {
 		background-color: var(--cm);
 		color: var(--cw);
 
+		span {
+			span {
+				top: 0 !important;
+			}
+		}
+
 		&:hover {
 			box-shadow: var(--sbtn);
+			background-color: var(--cb);
 		}
 	}
 }
@@ -290,8 +297,6 @@ section {
 		max-width: 54.5rem;
 	}
 }
-
-
 
 @media screen and (max-width: 1400px) {
 	html,

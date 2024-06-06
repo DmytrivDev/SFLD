@@ -63,3 +63,6 @@
 
 /* Blog */
 @import url('./sections/blog/blog.scss');
+
+/* Search */
+@import url('./sections/search/search.scss');

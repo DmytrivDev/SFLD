@@ -1,0 +1,181 @@
+.section__search {
+    margin-top: 4rem;
+}
+
+.search__container {
+    margin-top: 3rem;
+}
+
+.search__form {
+    position: relative;
+    flex-wrap: nowrap;
+
+    .facetwp-facet {
+        width: 100%;
+    }
+
+    .facetwp-input-wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    input {
+        height: 3.5rem;
+        padding: 0 2rem;
+        font-size: 1.125rem;
+        border-radius: 2rem 0 0 2rem;
+        font-weight: 500;
+        border: 1px solid var(--cbor) !important;
+        display: block;
+        width: 100%;
+        background-color: var(--cbg);
+    }
+
+    button,
+    i {
+        width: 9.5rem;
+        min-width: 9.5rem;
+        height: 3.5rem;
+        padding: 1rem;
+        line-height: 1;
+        border-radius: 0 2rem 2rem 0;
+        font-weight: 600;
+        background-color: var(--cb);
+        font-size: 0;
+        position: static;
+        display: inline-flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        transition: 0.3s;
+        box-shadow: none;
+        order: 1;
+        opacity: 1;
+        cursor: pointer;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            font-size: 0.875rem;
+            color: var(--cw);
+            font-style: normal;
+        }
+    }
+}
+
+.filter__cats {
+    margin-top: 1.5em;
+
+    & > .facetwp-facet {
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        opacity: 1 !important;
+
+        & > div {
+            padding: 0 !important;
+            background-image: none !important;
+
+            &:first-child {
+                padding: 0.75em 1.25em !important;
+                border-radius: 2em;
+                border: 1px solid var(--cg);
+                display: block;
+                color: var(--cm);
+                cursor: pointer;
+                font-weight: 600;
+                transition: 0.3s;
+
+                &:hover {
+                    box-shadow: var(--s1);
+                }
+
+                &.checked {
+                    background-color: var(--cm);
+                    border-color: var(--cm);
+                    color: var(--cw);
+                }
+            }
+
+            &.checked {
+                a,
+                span {
+                    background-color: var(--cm);
+                    border-color: var(--cm);
+                    color: var(--cw);
+                }
+            }
+
+            a,
+            span {
+                padding: 0.75em 1.25em !important;
+                border-radius: 2em;
+                border: 1px solid var(--cg);
+                display: block;
+                color: var(--cm);
+                cursor: pointer;
+                font-weight: 600;
+                transition: 0.3s;
+
+                &:hover {
+                    box-shadow: var(--s1);
+                }
+            }
+
+            .facetwp-counter {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .section__search {
+        margin-top: 3rem;
+    }
+    .search__container {
+        margin-top: 2.5rem;
+    }
+    .search__form {
+        input {
+            height: 3rem;
+            padding: 0 1.25rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        button,
+        i {
+            width: 7rem;
+            min-width: 7rem;
+            height: 3rem;
+        }
+    }
+    .filter__cats {
+        margin-top: 1em;
+        & > .facetwp-facet {
+            gap: .5rem;
+            & > div {
+                &:first-child {
+                    padding: 0.5em .75em !important;
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 500;
+                    box-shadow: none !important;
+                }
+                a,
+                span {
+                    padding: 0.5em .75em !important;
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 500;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
