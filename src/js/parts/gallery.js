@@ -1,4 +1,5 @@
 import Splide from '@splidejs/splide';
+import Accordion from 'accordion-js';
 
 const carousell = document.querySelector('.gallery__carousell');
 
@@ -12,7 +13,7 @@ export const galCar = () => {
       gap: '1.5rem',
       breakpoints: {
         960: {
-          perPage: 1,
+          perPage: 1, 
           arrows: false,
           pagination: false,
           gap: '0.75rem',
@@ -23,4 +24,17 @@ export const galCar = () => {
 
     new Splide(carousell, options).mount();
   }
+
+
+  const accordeon = document.querySelectorAll('.gallpage__list');
+
+    if(accordeon) {
+      const accOptions = {
+        duration: 300,
+      }
+
+      accordeon.forEach(el => {
+        new Accordion(el, accOptions);
+      })
+    }
 };

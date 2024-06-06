@@ -57,3 +57,9 @@
 
 /* Media */
 @import url('./sections/media/media.scss');
+
+/* Gallery */
+@import url('./sections/gallery/gallery.scss');
+
+/* Blog */
+@import url('./sections/blog/blog.scss');

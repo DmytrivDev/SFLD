@@ -1,6 +1,7 @@
 import Splide from '@splidejs/splide';
 
 const carousell = document.querySelector('.related__carousell');
+const blogItem = carousell.querySelector('.blogitem');
 
 export const relatedCar = () => {
   if (carousell) {
@@ -8,7 +9,6 @@ export const relatedCar = () => {
       type: 'slide',
       isNavigation: false,
       pagination: false,
-      autoWidth: true,
       perPage: 3,
       perMove: 1,
       gap: '1.5rem',
@@ -23,6 +23,11 @@ export const relatedCar = () => {
         },
       },
     };
+
+    if(blogItem) {
+      console.log('ddd')
+      options.perPage = 2;
+    }
 
     new Splide(carousell, options).mount();
   }

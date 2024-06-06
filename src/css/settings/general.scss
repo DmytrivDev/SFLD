@@ -115,6 +115,16 @@ body {
 			box-shadow: var(--sbtn);
 		}
 	}
+
+	&.black {
+		border: none;
+		background-color: var(--cm);
+		color: var(--cw);
+
+		&:hover {
+			box-shadow: var(--sbtn);
+		}
+	}
 }
 
 .splide__track--nav > .splide__list > .splide__slide {
