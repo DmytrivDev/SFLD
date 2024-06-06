@@ -10,6 +10,7 @@ import { relatedCar } from './parts/related.js';
 import { wwdFunc } from './parts/whatwedo.js';
 import { teamFunc } from './parts/team.js';
 import { progFunc } from './parts/program.js';
+import { searchF } from './parts/search.js';
 
 headerFunc();
 mainCar();
@@ -20,6 +21,7 @@ relatedCar();
 wwdFunc();
 teamFunc();
 progFunc();
+searchF();
 
 const scrollUp = document.querySelector('.scrollUp');
 

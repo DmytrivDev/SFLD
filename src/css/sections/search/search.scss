@@ -14,6 +14,10 @@
         width: 100%;
     }
 
+    .search__mob {
+        display: none;
+    }
+
     .facetwp-input-wrap {
         width: 100%;
         display: flex;
@@ -134,6 +138,63 @@
     }
 }
 
+.search__results {
+    margin-top: 3rem;
+}
+
+.no__results {
+    padding-top: 5.5rem;
+    color: var(--cl);
+    text-align: center;
+}
+
+.search__item {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid var(--cg);
+
+    &:last-child {
+        border-bottom: 1px solid var(--cg);
+    }
+}
+
+.search__left {
+    .search__inform {
+        max-width: 40.5rem;
+        margin-right: 9.87rem;
+        width: 100%;
+
+        a {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 500;
+            color: var(--cm);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: block;
+        }
+
+        .search__desc {
+            margin-top: 0.5rem;
+
+            b {
+                font-weight: 500;
+                font-family: var(--ff);
+            }
+        }
+    }
+}
+
+.search__tag {
+    padding: 0.25rem 1.25rem;
+    border-radius: 2rem;
+    background-color: var(--cbg);
+    font-weight: 500;
+    color: var(--cb);
+}
+
 @media screen and (max-width: 960px) {
     .section__search {
         margin-top: 3rem;
@@ -154,14 +215,26 @@
             min-width: 7rem;
             height: 3rem;
         }
+        .search__desc {
+            display: none;
+        }
+        .search__mob {
+            display: block;
+            input {
+                border-radius: 2rem;
+            }
+            i {
+                display: none;
+            }
+        }
     }
     .filter__cats {
         margin-top: 1em;
         & > .facetwp-facet {
-            gap: .5rem;
+            gap: 0.5rem;
             & > div {
                 &:first-child {
-                    padding: 0.5em .75em !important;
+                    padding: 0.5em 0.75em !important;
                     font-size: 0.75rem;
                     line-height: 1rem;
                     font-weight: 500;
@@ -169,7 +242,7 @@
                 }
                 a,
                 span {
-                    padding: 0.5em .75em !important;
+                    padding: 0.5em 0.75em !important;
                     font-size: 0.75rem;
                     line-height: 1rem;
                     font-weight: 500;
@@ -177,5 +250,48 @@
                 }
             }
         }
+    }
+    .search__results {
+        margin-top: 2.5rem;
+    }
+    .no__results {
+        padding-top: 2.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    .search__item {
+        padding-top: 1rem;
+        .button {
+            max-width: 21.5rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+    .search__left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .search__inform {
+            margin-top: 1rem;
+            max-width: inherit;
+            width: 100%;
+            margin-right: 0;
+            display: block;
+            order: 1;
+            a {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+            .search__desc {
+                margin-top: 0.75rem;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+    .search__tag {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
     }
 }
