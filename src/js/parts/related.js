@@ -1,10 +1,11 @@
 import Splide from '@splidejs/splide';
 
 const carousell = document.querySelector('.related__carousell');
-const blogItem = carousell.querySelector('.blogitem');
 
 export const relatedCar = () => {
   if (carousell) {
+    const blogItem = carousell.querySelector('.blogitem');
+    
     const options = {
       type: 'slide',
       isNavigation: false,
