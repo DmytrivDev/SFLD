@@ -163,6 +163,9 @@
             position: relative;
             overflow: hidden;
             display: block;
+            &::after {
+                display: none;
+            }
         }
     }
 }

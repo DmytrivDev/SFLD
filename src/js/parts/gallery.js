@@ -17,7 +17,7 @@ export const galCar = () => {
           arrows: false,
           pagination: false,
           gap: '0.75rem',
-          fixedWidth: '9.75rem',
+          fixedWidth: '9.75rem', 
         },
       },
     };

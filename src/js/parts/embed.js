@@ -17,7 +17,7 @@ export const embedFunc = () => {
 
   carousell?.forEach(el => {
     const splide = new Splide(el, sliderOptions).mount();
-
+    updateSlideNumber(splide, el);
     splide.on('moved', () => {
       updateSlideNumber(splide, el);
     });

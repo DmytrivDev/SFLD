@@ -11,6 +11,8 @@ import { wwdFunc } from './parts/whatwedo.js';
 import { teamFunc } from './parts/team.js';
 import { progFunc } from './parts/program.js';
 import { searchF } from './parts/search.js';
+import { popGal } from './parts/popgal.js';
+import { countryFunc } from './parts/countries.js';
 
 headerFunc();
 mainCar();
@@ -22,6 +24,8 @@ wwdFunc();
 teamFunc();
 progFunc();
 searchF();
+popGal();
+countryFunc();
 
 const scrollUp = document.querySelector('.scrollUp');
 

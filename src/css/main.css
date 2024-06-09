@@ -25,6 +25,7 @@
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
+@import url('./sections/general/gallery.scss');
 
 /* News */
 @import url('./sections/news/news.scss');
@@ -57,6 +58,9 @@
 
 /* Media */
 @import url('./sections/media/media.scss');
+
+/* Media */
+@import url('./sections/ledies/countries.scss');
 
 /* Gallery */
 @import url('./sections/gallery/gallery.scss');
