@@ -25,7 +25,7 @@ export const filterFunc = () => {
     });
   }
 
-  const sortCtrl = document.querySelector('.filter__sortctrl');
+  const sortCtrl = document.querySelector('.newsSort');
 
   if (sortCtrl) {
     document.addEventListener('facetwp-loaded', function () {

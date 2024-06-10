@@ -317,9 +317,9 @@ section {
 	html,
 	body {
 		font-size: 16px;
-		&.overhideMob {
-			overflow: hidden;
-		}
+	}
+	.overhideMob {
+		overflow: hidden;
 	}
 	.container {
 		padding: 0 1em;

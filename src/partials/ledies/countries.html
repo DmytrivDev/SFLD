@@ -1,160 +1,33 @@
 <section class="section__cointry">
   <div class="container">
-    <div class="country__filtercont">
-      <button class="clearfilter">
+    <div class="country__filtercont filteredCont">
+      <button class="clearfilter clearBtn" disabled>
         <span>Clear all filters</span>
       </button>
-      <button class="openFilter">
+      <button class="openFilter toggleFilter">
         <span>Filter</span>
       </button>
-      <button class="filter__sortctrl"></button>
-      <ul class="country__activefilters">
-        <li>
-          <button>
-            <span>Australia</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Italy</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Norway</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Spain</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Ukraine</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Poland</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Slovenia</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>United Kingdom</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Costa Rica</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Ireland</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Argentina</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Barbados</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Portugal</span>
-          </button>
-        </li>
-        <li>
-          <button class="showMoreCtrs hide"></button>
-        </li>
-      </ul>
+      <button class="filter__sortctrl countrySort"></button>
+      <ul class="country__activefilters"></ul>
     </div>
+    <div class="clearfix"></div>
     <div class="country__main flex">
       <div class="country__left">
         <div class="country__filtermob">
-          <button class="clearfilter">
+          <button class="clearfilter clearBtn" disabled>
             <span>Clear all filters</span>
           </button>
-          <button class="clearfilter apply">
-            <span>apply</span>
+          <button class="clearfilter apply toggleFilter">
+            <span>Apply</span>
           </button>
         </div>
-        <ul class="country__activefilters">
-          <li>
-            <button>
-              <span>Australia</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Italy</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Norway</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Spain</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Ukraine</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Poland</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Slovenia</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>United Kingdom</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Costa Rica</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Ireland</span>
-            </button>
-          </li>
-          <li>
-            <button>
-              <span>Argentina</span>
-            </button>
-          </li>
-          <li>
-            <button class="showMoreCtrs hide"></button>
-          </li>
-        </ul>
+        <ul class="country__activefilters mobCountriesList hidden filteredCont"></ul>
         <div class="country__filterrirle">Country</div>
         <form class="country__search">
-          <input type="text" name="searchcountry" placeholder="Search" />
+          <input type="text" id="searchcountry" name="searchcountry" placeholder="Search" />
         </form>
         <form class="countries__list">
-          <label class="countries__item flex">
+          <label data-country="Costa Rica" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/ua.svg" alt="" class="cover"
@@ -164,7 +37,7 @@
             <input type="checkbox" name="country" value="Costa Rica" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Australia" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_1.png" alt="" class="cover"
@@ -174,7 +47,7 @@
             <input type="checkbox" name="country" value="Australia" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Austria" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_2.png" alt="" class="cover"
@@ -184,7 +57,7 @@
             <input type="checkbox" name="country" value="Austria" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Italy" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_3.png" alt="" class="cover"
@@ -194,7 +67,7 @@
             <input type="checkbox" name="country" value="Italy" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Norway" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_4.png" alt="" class="cover"
@@ -204,7 +77,7 @@
             <input type="checkbox" name="country" value="Norway" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Spain" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_5.png" alt="" class="cover"
@@ -214,7 +87,7 @@
             <input type="checkbox" name="country" value="Spain" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="United Kingdom" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_6.png" alt="" class="cover"
@@ -224,7 +97,7 @@
             <input type="checkbox" name="country" value="United Kingdom" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Costa Rica" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/ua.svg" alt="" class="cover"
@@ -234,7 +107,7 @@
             <input type="checkbox" name="country" value="Costa Rica" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Australia" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_1.png" alt="" class="cover"
@@ -244,7 +117,7 @@
             <input type="checkbox" name="country" value="Australia" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Austria" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_2.png" alt="" class="cover"
@@ -254,7 +127,7 @@
             <input type="checkbox" name="country" value="Austria" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Italy" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_3.png" alt="" class="cover"
@@ -264,7 +137,7 @@
             <input type="checkbox" name="country" value="Italy" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Norway" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_4.png" alt="" class="cover"
@@ -274,7 +147,7 @@
             <input type="checkbox" name="country" value="Norway" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Spain" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_5.png" alt="" class="cover"
@@ -284,7 +157,7 @@
             <input type="checkbox" name="country" value="Spain" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="United Kingdom" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_6.png" alt="" class="cover"
@@ -294,7 +167,7 @@
             <input type="checkbox" name="country" value="United Kingdom" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Costa Rica" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/ua.svg" alt="" class="cover"
@@ -304,7 +177,7 @@
             <input type="checkbox" name="country" value="Costa Rica" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Australia" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_1.png" alt="" class="cover"
@@ -314,7 +187,7 @@
             <input type="checkbox" name="country" value="Australia" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Austria" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_2.png" alt="" class="cover"
@@ -324,7 +197,7 @@
             <input type="checkbox" name="country" value="Austria" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Italy" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_3.png" alt="" class="cover"
@@ -334,7 +207,7 @@
             <input type="checkbox" name="country" value="Italy" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Norway" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_4.png" alt="" class="cover"
@@ -344,7 +217,7 @@
             <input type="checkbox" name="country" value="Norway" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="Spain" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_5.png" alt="" class="cover"
@@ -354,7 +227,7 @@
             <input type="checkbox" name="country" value="Spain" />
             <span class="country__check"></span>
           </label>
-          <label class="countries__item flex">
+          <label data-country="United Kingdom" class="countries__item flex">
             <span class="countries__name">
               <span class="flag"
                 ><img src="./img/content/flag_6.png" alt="" class="cover"
@@ -368,7 +241,7 @@
       </div>
       <div class="country__right">
         <ul class="country__acc">
-          <li class="ac st">
+          <li data-country="Ukraine" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Ukraine</div>
             </div>
@@ -529,7 +402,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Australia" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Australia</div>
             </div>
@@ -610,7 +483,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Austria" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Austria</div>
             </div>
@@ -691,7 +564,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Costa Rica" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Costa Rica</div>
             </div>
@@ -772,7 +645,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Italy" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Italy</div>
             </div>
@@ -853,7 +726,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Norway" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Norway</div>
             </div>
@@ -934,7 +807,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="Spain" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">Spain</div>
             </div>
@@ -1015,7 +888,7 @@
               </div>
             </div>
           </li>
-          <li class="ac st">
+          <li data-country="United Kingdom" class="countryItemAcc ac st visible">
             <div class="ac-header">
               <div class="ac-trigger">United Kingdom</div>
             </div>
@@ -1096,9 +969,9 @@
               </div>
             </div>
           </li>
-          <li class="ac">
+          <li data-country="Latvia" class="countryItemAcc ac visible">
             <div class="ac-header">
-              <div class="ac-trigger">Latvis</div>
+              <div class="ac-trigger">Latvia</div>
             </div>
             <div class="ac-panel">
               <div class="ac-text">
@@ -1177,7 +1050,7 @@
               </div>
             </div>
           </li>
-          <li class="ac">
+          <li data-country="Lithuania" class="countryItemAcc ac visible">
             <div class="ac-header">
               <div class="ac-trigger">Lithuania</div>
             </div>
@@ -1259,7 +1132,7 @@
             </div>
           </li>
         </ul>
-        <a href="#" class="button sec countries__more">
+        <a href="#" data-st="Show More" data-ed="Hide" class="button sec countries__more visibleBtn">
           <span><span>Show More</span><span>Show More</span></span>
         </a>
       </div>
