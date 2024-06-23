@@ -164,6 +164,12 @@ body {
                         border: none;
                     }
 
+                    transition: .3s;
+
+                        &:hover {
+                            background-color: var(--cbg);
+                        }
+
                     a {
                         color: var(--cm);
                         font-weight: 500;
@@ -176,6 +182,7 @@ body {
 
     &.header__lang {
         ul {
+            text-transform: uppercase;
             li {
                 a {
                     color: var(--cm);
@@ -213,10 +220,33 @@ body {
     transition: 0.3s;
     background-color: var(--cm);
     color: var(--cw);
+    position: relative;
+    overflow: hidden;
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: var(--grdh);
+        opacity: 0;
+        transition: .3s;
+    }
 
     &:hover {
         background-color: var(--cb);
         box-shadow: var(--sbtn);
+
+        &::after {
+            opacity: 1;
+        }
     }
 
     &::before {
@@ -228,6 +258,8 @@ body {
         background-size: contain;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19.0193 20L13.174 14.1546C12.7087 14.5388 12.1736 14.8395 11.5686 15.0566C10.9637 15.2738 10.3379 15.3823 9.69125 15.3823C8.10059 15.3823 6.75438 14.8316 5.65263 13.7302C4.55088 12.6288 4 11.2829 4 9.69256C4 8.10239 4.55072 6.75605 5.65216 5.65354C6.75361 4.55118 8.0995 4 9.68986 4C11.2801 4 12.6264 4.55087 13.7289 5.6526C14.8313 6.75434 15.3825 8.10053 15.3825 9.69117C15.3825 10.3558 15.271 10.9906 15.0479 11.5955C14.8247 12.2004 14.527 12.7266 14.1547 13.1739L20 19.0191L19.0193 20ZM9.69125 13.9866C10.8904 13.9866 11.9061 13.5704 12.7382 12.7381C13.5706 11.906 13.9867 10.8903 13.9867 9.69117C13.9867 8.49202 13.5706 7.47637 12.7382 6.64421C11.9061 5.8119 10.8904 5.39574 9.69125 5.39574C8.49209 5.39574 7.47642 5.8119 6.64425 6.64421C5.81193 7.47637 5.39577 8.49202 5.39577 9.69117C5.39577 10.8903 5.81193 11.906 6.64425 12.7381C7.47642 13.5704 8.49209 13.9866 9.69125 13.9866Z' fill='white'/%3E%3C/svg%3E");
         content: "";
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -287,6 +319,9 @@ body {
         &:hover {
             background-color: var(--cm);
             box-shadow: none;
+        }
+        &::after {
+            display: none;
         }
     }
 }

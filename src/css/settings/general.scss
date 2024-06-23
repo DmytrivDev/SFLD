@@ -37,44 +37,13 @@ body {
 	font-weight: 600;
 	display: inline-flex;
 	justify-content: center;
+	align-items: center;
+	align-content: center;
 	transition: 0.5s;
 
-	&.primary {
-		span {
-			span {
-				height: 100%;
-			}
-		}
-	}
-
-	span {
-		overflow: hidden;
-
-		span {
-			height: calc(100% - 2px);
-			display: flex;
-			align-items: center;
-			align-content: center;
-			justify-content: center;
-			position: relative;
-			transition: 0.5s;
-			top: 0;
-		}
-	}
-
-	&:hover {
-		span {
-			span {
-				top: -2.75rem;
-			}
-		}
-
-		&.primary {
-			span {
-				span {
-					top: -3rem;
-				}
-			}
+	span span {
+		&:last-child {
+			display: none;
 		}
 	}
 
@@ -90,10 +59,33 @@ body {
 	&.primary {
 		background-color: var(--cm);
 		color: var(--cw);
+		overflow: hidden;
+		position: relative;
+
+		span {
+			position: relative;
+			z-index: 2;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background: var(--grdh);
+			opacity: 0;
+			transition: .3s;
+		}
 
 		&:hover {
 			background-color: var(--cb);
 			box-shadow: var(--sbtn);
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -120,16 +112,33 @@ body {
 		border: none;
 		background-color: var(--cm);
 		color: var(--cw);
+		overflow: hidden;
+		position: relative;
 
 		span {
-			span {
-				top: 0 !important;
-			}
+			position: relative;
+			z-index: 2;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background: var(--grdh);
+			opacity: 0;
+			transition: .3s;
 		}
 
 		&:hover {
 			box-shadow: var(--sbtn);
 			background-color: var(--cb);
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -309,6 +318,9 @@ section {
 				background-color: var(--cm);
 				box-shadow: none;
 			}
+		}
+		&::after {
+			display: none;
 		}
 	}
 }

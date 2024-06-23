@@ -34,17 +34,37 @@
             align-content: center;
             justify-content: center;
             transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: var(--grdh);
+                opacity: 0;
+                transition: .3s;
+            }
 
             img {
                 width: 2rem;
                 height: auto;
                 transition: 0.3s;
+                position: relative;
+                z-index: 2;
             }
 
             &:hover {
                 border-color: transparent;
                 background-color: var(--cb);
                 box-shadow: var(--s1);
+
+                &::after {
+                    opacity: 1;
+                }
 
                 img {
                     filter: brightness(0) invert(1);
@@ -119,6 +139,9 @@
         margin-top: 2.5rem;
         gap: 1.5rem;
         li {
+            &::after {
+                display: none;
+            }
             a {
                 border-color: var(--cg) !important;
                 background-color: transparent !important;

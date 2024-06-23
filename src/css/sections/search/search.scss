@@ -58,15 +58,34 @@
         order: 1;
         opacity: 1;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
 
         &::before {
-            display: none;
+            font-size: 0;
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: var(--grdh);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
         }
 
         &::after {
             font-size: 0.875rem;
             color: var(--cw);
             font-style: normal;
+            position: relative;
+            z-index: 2;
         }
     }
 }
@@ -159,6 +178,8 @@
 }
 
 .search__left {
+    align-items: flex-start;
+    align-content: flex-start;
     .search__inform {
         max-width: 40.5rem;
         margin-right: 9.87rem;
@@ -214,6 +235,9 @@
             width: 7rem;
             min-width: 7rem;
             height: 3rem;
+            &::before {
+                display: none;
+            }
         }
         .search__desc {
             display: none;

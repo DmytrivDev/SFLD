@@ -108,7 +108,7 @@
 
             .list {
                 li {
-                    gap: .5rem;
+                    gap: 0.5rem;
                     color: var(--ct2);
                     display: flex;
                     align-items: center;
@@ -120,7 +120,7 @@
                         min-width: 1.25em;
                         height: 1.25rem;
                         content: "";
-                        transition: .3s;
+                        transition: 0.3s;
                         background-repeat: no-repeat;
                         background-position: center center;
                         background-size: contain;
@@ -156,6 +156,20 @@
     align-content: center;
     justify-content: center;
     transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: var(--grdh);
+        opacity: 0;
+        transition: .3s;
+    }
 
     &::after {
         width: 1.5rem;
@@ -173,6 +187,10 @@
         background-color: var(--cb);
         border-color: transparent;
         box-shadow: var(--s1);
+
+        &::before {
+            opacity: 1 !important;
+        }
 
         &::after {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 11.6098C4 12.8571 4.41983 13.9218 5.2595 14.8038C6.09933 15.6859 7.13975 16.1578 8.38075 16.2192H8.94825L7.302 14.5635L8.35575 13.5098L11.8365 17L8.35575 20.5L7.302 19.4462L8.979 17.75H8.4115C6.75133 17.6885 5.351 17.0664 4.2105 15.8837C3.07017 14.7009 2.5 13.2813 2.5 11.625C2.5 9.91733 3.09075 8.46958 4.27225 7.28175C5.45358 6.09392 6.89492 5.5 8.59625 5.5H11.8463V7H8.59625C7.32058 7 6.23558 7.44617 5.34125 8.3385C4.44708 9.23083 4 10.3213 4 11.6098ZM14.0385 17.75V16.25H21.5V17.75H14.0385ZM14.0385 12.375V10.875H21.5V12.375H14.0385ZM14.0385 7V5.5H21.5V7H14.0385Z' fill='white'/%3E%3C/svg%3E");
@@ -213,6 +231,31 @@
                 font-weight: 500;
                 cursor: pointer;
 
+                &:not(.active, .dots, .next, .prev) {
+                    position: relative;
+
+                    &::after {
+                        width: 1rem;
+                        height: 0.125rem;
+                        border-radius: 0.125rem;
+                        left: 50%;
+                        position: absolute;
+                        background-color: var(--cb);
+                        display: block;
+                        content: "";
+                        bottom: 0;
+                        transform: translate(-50%, 100%);
+                        opacity: 0;
+                        transition: .3s;
+                    }
+
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
                 &.dots {
                     cursor: inherit;
                 }
@@ -227,11 +270,16 @@
                     height: 2rem;
                     position: absolute;
                     top: 50%;
-                    transform: translateY(-50%);
+                    transform: translateY(-50%) scale(1);
                     background-repeat: no-repeat;
                     background-position: center center;
                     background-size: contain;
                     font-size: 0;
+                    transition: .3s;
+
+                    &:hover {
+                        transform: translateY(-50%) scale(.8);
+                    }
 
                     &.prev {
                         left: 0;

@@ -29,12 +29,19 @@ export const galCar = () => {
   const accordeon = document.querySelectorAll('.gallpage__list');
 
     if(accordeon) {
-      const accOptions = {
+      let accOptions = {
         duration: 300,
       }
 
+      let $index = 0;
       accordeon.forEach(el => {
+        if($index === 0) {
+          accOptions.openOnInit = [0];
+        } else {
+          delete accOptions.openOnInit;
+        }
         new Accordion(el, accOptions);
+        $index++;
       })
     }
 };

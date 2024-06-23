@@ -3,6 +3,7 @@ import Accordion from 'accordion-js';
 
 const carousells = document.querySelectorAll('.country__carousell');
 const maxOnPage = 8;
+let accordeonMain;
 
 export const countryFunc = () => {
   const options = {
@@ -23,10 +24,9 @@ export const countryFunc = () => {
   if (accordeon) {
     const accOptions = {
       duration: 300,
-      openOnInit: [0],
     };
 
-    new Accordion(accordeon, accOptions);
+    accordeonMain = new Accordion(accordeon, accOptions);
   }
 
   const searchInput = document.getElementById('searchcountry');
@@ -109,7 +109,7 @@ export const countryFunc = () => {
 
   const sortBtn = document.querySelector('.countrySort');
 
-  sortBtn.addEventListener('click', evt => {
+  sortBtn?.addEventListener('click', evt => {
     evt.preventDefault();
 
     sortBtn.classList.toggle('sorted');
@@ -133,7 +133,48 @@ export const countryFunc = () => {
       countriesListAcc.appendChild(item);
     });
   });
+
+  // Новий код для перевірки параметру `country` в URL
+  const countryParam = getParameterByName('country');
+  if (countryParam) {
+    const formattedCountry = formatCountryName(countryParam);
+    checkboxes?.forEach(checkbox => {
+      if (checkbox.value === formattedCountry) {
+        checkbox.checked = true;
+      }
+    });
+    handleCheckboxChange(checkboxes);
+
+    const accItem = document.querySelector(
+      '.countryItemAcc[data-country="' + formattedCountry + '"]'
+    );
+
+    if (accItem) {
+      const nodes = Array.from(document.querySelectorAll('.countryItemAcc'));
+      const itemAccIndex = nodes.indexOf(accItem);
+
+      accordeonMain?.open(itemAccIndex);
+    } else {
+      accordeonMain?.open(0);
+    }
+  } else {
+    accordeonMain?.open(0);
+  }
 };
+
+// Функція для отримання значення параметра з URL
+function getParameterByName(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+
+// Функція для формату параметра URL до формату значення інпута
+function formatCountryName(countryParam) {
+  return countryParam
+    .split('_')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
 
 function searchCountries(evt) {
   const word = evt.target.value.toLowerCase();
@@ -223,9 +264,9 @@ const filterCountry = array => {
 
   const moreItemsButton = document.querySelector('.countries__more');
   if (index > maxOnPage) {
-    moreItemsButton.classList.add('visibleBtn');
+    moreItemsButton?.classList.add('visibleBtn');
   } else {
-    moreItemsButton.classList.remove('visibleBtn');
+    moreItemsButton?.classList.remove('visibleBtn');
   }
 
   filteredList?.forEach(el => {

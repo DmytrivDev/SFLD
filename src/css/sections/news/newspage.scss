@@ -82,16 +82,36 @@
             justify-content: center;
             border-radius: 50%;
             transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: var(--grdh);
+                opacity: 0;
+                transition: .3s;
+            }
 
             img {
                 width: 1.5rem;
                 height: auto;
                 transition: 0.3s;
+                position: relative;
+                z-index: 2;
             }
 
             &:hover {
                 background-color: var(--cb);
                 box-shadow: var(--s1);
+
+                &::after {
+                    opacity: 1;
+                }
 
                 img {
                     filter: brightness(0) invert(1);
@@ -139,6 +159,9 @@
         }
         .a2a_kit {
             margin-top: 0.5rem;
+            &::after {
+                display: none;
+            }
         }
     }
 }

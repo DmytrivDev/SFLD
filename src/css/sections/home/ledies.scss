@@ -11,19 +11,42 @@
     grid-template-columns: repeat(3, 1fr);
     display: grid;
 
+    h4 {
+        a {
+            color: var(--cm);
+        }
+    }
+
+    .ledies {
+        &:hover {
+            .ledies__img {
+                img {
+                    transform: translateX(-50%) translateY(-50%) scale(1.05);
+                }
+            }
+        }
+
+        .ledies__img {    
+            img {
+                transform: translateX(-50%) translateY(-50%) scale(1);
+                transition: 0.3s;
+            }
+        }
+    }
+
     &.sm {
-        grid-template-columns: repeat(4, 1fr); 
+        grid-template-columns: repeat(4, 1fr);
 
         .ledies {
             padding-bottom: 23.625rem;
         }
 
-        .ledies__top {        
+        .ledies__top {
             h4 {
                 font-size: 1.125rem;
                 line-height: 1.5rem;
             }
-        
+
             p {
                 margin-top: 2rem;
                 font-size: 0.75rem;
@@ -42,18 +65,23 @@
 @media screen and (max-width: 960px) {
     .ledies__list {
         grid-template-columns: repeat(2, 1fr);
+        .ledies__img {    
+            img {
+                transform: translateX(-50%) translateY(-50%) scale(1) !important;
+            }
+        }
         &.sm {
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr);
             .ledies {
                 padding-bottom: 36vw;
             }
-            .ledies__top {        
+            .ledies__top {
                 h4 {
                     font-size: 1.125rem;
                     line-height: 1.5rem;
                 }
                 p {
-                    margin-top: .5rem;
+                    margin-top: 0.5rem;
                     font-size: 0.875rem;
                     line-height: 1.25rem;
                 }
