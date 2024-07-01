@@ -137,16 +137,15 @@ export const countryFunc = () => {
   // Новий код для перевірки параметру `country` в URL
   const countryParam = getParameterByName('country');
   if (countryParam) {
-    const formattedCountry = formatCountryName(countryParam);
     checkboxes?.forEach(checkbox => {
-      if (checkbox.value === formattedCountry) {
+      if (checkbox.value === countryParam) {
         checkbox.checked = true;
       }
     });
     handleCheckboxChange(checkboxes);
 
     const accItem = document.querySelector(
-      '.countryItemAcc[data-country="' + formattedCountry + '"]'
+      '.countryItemAcc[data-country="' + countryParam + '"]'
     );
 
     if (accItem) {
@@ -182,7 +181,7 @@ function searchCountries(evt) {
   const ctrs = ctrsList.querySelectorAll('.countries__item');
 
   ctrs.forEach(el => {
-    const name = el.dataset.country.toLowerCase();
+    const name = el.textContent.toLowerCase();
 
     if (name.includes(word)) {
       el.classList.remove('hide');
@@ -197,7 +196,10 @@ const handleCheckboxChange = checkboxes => {
 
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
-      selectedValues.push(checkbox.value);
+      selectedValues.push({
+        val: checkbox.value,
+        name: checkbox.closest('label').textContent.trim(),
+      });
     }
   });
 
@@ -238,7 +240,7 @@ const filterCountry = array => {
       el.classList.remove('st');
       el.classList.remove('visible');
 
-      if (array.includes(country)) {
+      if (array.some(obj => obj.val === country)) {
         el.classList.add('visible');
 
         if (index < maxOnPage) {
@@ -276,10 +278,10 @@ const filterCountry = array => {
   });
 };
 
-const createFilteredItem = arrEl => {
+const createFilteredItem = el => {
   return `<li>
-          <button class="remFil" data-ctr="${arrEl}">
-            <span>${arrEl}</span>
+          <button class="remFil" data-ctr="${el.val}">
+            <span>${el.name}</span>
           </button>
         </li>`;
 };

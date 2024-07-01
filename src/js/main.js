@@ -13,6 +13,7 @@ import { progFunc } from './parts/program.js';
 import { searchF } from './parts/search.js';
 import { popGal } from './parts/popgal.js';
 import { countryFunc } from './parts/countries.js';
+import { pagination } from './parts/events.js';
 
 headerFunc();
 mainCar();
@@ -26,6 +27,7 @@ progFunc();
 searchF();
 popGal();
 countryFunc();
+pagination();
 
 const scrollUp = document.querySelector('.scrollUp');
 

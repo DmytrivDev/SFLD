@@ -5,18 +5,27 @@ export const filterFunc = () => {
   let selector;
 
   if (isFilter) {
-
-    ////////////////Temp
-    new NiceSelect2(document.querySelector('.facetwp-dropdown'), {
-      searchable: false,
-      searchtext: 'zoek',
-      selectedtext: 'geselecteerd',
-    });
-    ////////////////Temp
-
     document.addEventListener('facetwp-loaded', function () {
+      const pager = document.querySelector('.facetwp-pager');
+
+      if(pager) {
+        const pagerCont = pager.closest('.pagination__cont');
+        const chldCount = pager.children.length;
+
+        if(chldCount > 0) {
+          pagerCont.style.display = 'block';
+        } else {
+          pagerCont.style.display = 'none';
+        }
+      }
+
+
       if (!document.querySelector('.nice-select.facetwp-dropdown')) {
-        new NiceSelect2(document.querySelector('.facetwp-dropdown'), {
+        const selector = document.querySelector('.facetwp-dropdown');
+        const firstOption = selector.querySelector('option');
+        const optionText = firstOption.textContent.trim();
+        selector.setAttribute('placeholder', optionText);
+        new NiceSelect2(selector, {
           searchable: false,
           searchtext: 'zoek',
           selectedtext: 'geselecteerd',

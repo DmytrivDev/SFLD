@@ -34,8 +34,8 @@
 }
 
 .footer__nav {
-    width: 39.4rem;
-    margin-right: 7.7rem;
+    width: 45.4rem;
+    margin-right: 5rem;
 
     ul {
         gap: 2.5rem;
@@ -46,8 +46,18 @@
         flex-wrap: wrap;
 
         & > li {
-            min-width: 11.43rem;
+            min-width: 13.43rem;
             margin-bottom: 0.75rem;
+
+            &.footerctrl {
+                li {
+                    display: none;
+
+                    &.nohide {
+                        display: block;
+                    }
+                }
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -56,6 +66,11 @@
             & > a {
                 font-weight: 500;
                 color: var(--cw);
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             &:nth-child(2), &:nth-child(4), &:nth-child(6) {
@@ -135,12 +150,17 @@
                 & > a {
                     font-size: 0.875rem;
                     line-height: 1.25rem;
+                    height: 1rem;
                 }
             }
             .sub-menu {
                 display: block;
                 li {
-                    margin-bottom: 0.75rem;
+                    margin-top: 0.75rem;
+                    margin-bottom: 0;
+                    &:first-child {
+                        margin-top: 0;
+                    }
                 }
             }
         }

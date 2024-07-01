@@ -31,3 +31,17 @@ function changeQueryParams(param, val) {
 
   window.history.replaceState({}, document.title, url);
 }
+
+
+document.addEventListener('facetwp-refresh', function () {
+  const url = new URL(window.location);
+  const par = url.searchParams.get('s');
+
+  if (par) {
+    document.querySelectorAll('.showSAfter')?.forEach(el => {
+      el.style.display = 'block';
+    });
+
+    document.querySelector('.removeSAfter')?.remove();
+  }
+});

@@ -87,6 +87,9 @@
             color: var(--cm);
         }
     }
+    .hideArrows {
+        display: none !important;
+    }
 }
 
 .wwd__slide {

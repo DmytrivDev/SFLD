@@ -8,6 +8,7 @@ export const galCar = () => {
     const options = {
       type: 'loop',
       isNavigation: false,
+      pagination: false,
       perPage: 4,
       perMove: 1,
       gap: '1.5rem',

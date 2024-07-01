@@ -22,6 +22,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "accordion-js": "^3.3.4",
+    "axios": "^1.7.2",
     "copy-text-to-clipboard": "^3.2.0",
     "nice-select2": "^2.2.0",
     "npm": "^10.7.0",

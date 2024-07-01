@@ -75,8 +75,8 @@
         a {
             width: 3rem;
             height: 3rem;
-            border: 1px solid var(--cg);
-            display: flex;
+            border: 1px solid var(--cg) !important;
+            display: flex !important;
             align-items: center;
             align-content: center;
             justify-content: center;
