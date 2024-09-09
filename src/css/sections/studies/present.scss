@@ -1,0 +1,26 @@
+.present__content {
+    .plates__img {
+        margin-top: 2rem;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .plates__imginner {
+            padding-top: 49.3%;
+
+            .wp-block-video::after {
+                background-size: 6rem;
+            }
+        }
+    }
+}
+
+.present__text {
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 960px) {
+    .present__text {
+        margin-top: 2.5rem;
+    }
+}

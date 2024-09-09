@@ -1,16 +1,18 @@
 .ledies {
     border-radius: 0.75rem;
-    padding-bottom: 32rem;
     position: relative;
     overflow: hidden;
     background-color: var(--cbg);
+    display: flex;
+    flex-direction: column;
 }
 
 .ledies__top {
     padding: 1rem;
+    order: 1;
 
     p {
-        margin-top: 2.5rem;
+        margin-top: 1rem;
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: var(--cm);
@@ -18,9 +20,9 @@
 }
 
 .ledies__img {
-    height: 32rem;
+    height: 36rem;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
@@ -53,10 +55,15 @@
     align-items: center;
     align-content: center;
 
+    * {
+        color: var(--cm) !important;
+    }
+
     .flag {
         width: 1rem;
         height: 1rem;
         border-radius: 50%;
+        color: var(--cm) !important;
         position: relative;
         overflow: hidden;
     }
@@ -66,7 +73,11 @@
     .ledies__top {
         padding: 1rem .5rem;
         h4 {
+            min-height: 3rem;
             font-size: 1.125rem;
+            a {
+                min-height: 3rem;
+            }
         }
         p {
             margin-top: .5rem;

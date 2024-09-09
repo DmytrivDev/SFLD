@@ -213,6 +213,33 @@
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
+
+    ul {
+        color: var(--ct);
+        margin-top: 0.25rem;
+        padding-left: 1rem;
+
+        li {
+            list-style-type: disc;
+        }
+    }
+
+    ol {
+        color: var(--ct);
+        margin-top: 0.25rem;
+        padding-left: 1rem;
+
+        li {
+            list-style-type: decimal;
+        }
+    }
+
+    a {
+		text-decoration: underline;
+		text-underline-position: under;
+		text-decoration-thickness: 1px;
+        color: var(--ct);
+	}
 }
 
 .speakers__title {

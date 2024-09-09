@@ -1,7 +1,9 @@
 import Splide from '@splidejs/splide';
 
 export const popGal = () => {
-  const gallery = document.querySelectorAll('.gallery__carousell, .gallpage__gellery');
+  const gallery = document.querySelectorAll(
+    '.gallery__carousell, .gallpage__gellery'
+  );
 
   gallery?.forEach(el => {
     el.addEventListener('click', evt => {
@@ -16,6 +18,7 @@ export const popGal = () => {
         const slideIndex = item.dataset.index;
 
         createGallery(gall, slideIndex);
+        document.querySelector('body').classList.add('overhide');
       }
     });
   });
@@ -37,7 +40,7 @@ const options = {
 const thumbnailOptions = {
   type: 'slide',
   perPage: 0,
-  wheel: true,
+  wheel: false,
   releaseWheel: false,
   gap: '.75em',
   height: '100%',
@@ -136,6 +139,7 @@ function updateSlideNumber(slide, el) {
     el.addEventListener('click', evt => {
       evt.preventDefault();
 
+      document.querySelector('body').classList.remove('overhide');
       document.querySelector('.popgal__container').classList.remove('opened');
     });
   });

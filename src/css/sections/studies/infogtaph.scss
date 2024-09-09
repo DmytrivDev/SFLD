@@ -1,0 +1,51 @@
+.study__infographlist {
+    margin-top: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+
+    li {
+        padding: 0 1.5rem;
+        border-right: 1px solid var(--cbor);
+
+        &:nth-child(4n) {
+            border: none;
+        }
+
+        h3 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 500;
+            color: var(--cb);
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        &.prpl {
+            h3 {
+                color: var(--cp);
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .study__infographlist {
+        margin-top: 2.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        row-gap: 1.5rem;
+        li {
+            padding: 0;
+            border-right: none;
+            p {
+                margin-top: .6rem;
+            }
+        }
+    }
+}

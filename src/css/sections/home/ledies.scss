@@ -12,8 +12,11 @@
     display: grid;
 
     h4 {
+        min-height: 4rem;
         a {
+            min-height: 4rem;
             color: var(--cm);
+            display: block;
         }
     }
 
@@ -37,18 +40,18 @@
     &.sm {
         grid-template-columns: repeat(4, 1fr);
 
-        .ledies {
-            padding-bottom: 23.625rem;
-        }
-
         .ledies__top {
             h4 {
                 font-size: 1.125rem;
                 line-height: 1.5rem;
+                min-height: 3rem;
+                a {
+                    min-height: 3rem; 
+                }
             }
 
             p {
-                margin-top: 2rem;
+                margin-top: 1rem;
                 font-size: 0.75rem;
                 line-height: 1rem;
                 color: var(--ct2);
@@ -72,13 +75,14 @@
         }
         &.sm {
             grid-template-columns: repeat(3, 1fr);
-            .ledies {
-                padding-bottom: 36vw;
-            }
             .ledies__top {
                 h4 {
                     font-size: 1.125rem;
                     line-height: 1.5rem;
+                    min-height: 3rem; 
+                    a {
+                        min-height: 3rem;
+                    }
                 }
                 p {
                     margin-top: 0.5rem;
@@ -100,9 +104,6 @@
         &.sm {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            .ledies {
-                padding-bottom: 56vw;
-            }
             .ledies__img {
                 height: 56vw;
             }

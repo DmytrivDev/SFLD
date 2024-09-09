@@ -1,0 +1,368 @@
+.graphick__part {
+    &.purple {
+        .graphick__tag {
+            background-color: var(--cp);
+        }
+
+        .graphick__linecont {
+            height: 3.5rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            &::after,
+            &::before {
+                background-color: var(--cp);
+            }
+        }
+        .graphick__line {
+            background-color: var(--cp2);
+        }
+    }
+}
+
+.graphick__content {
+    margin-top: 4.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    background-color: var(--cbg);
+    overflow: hidden;
+}
+
+.graphick__main {
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.graphick__tag {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 3rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--cw);
+    background-color: var(--cb);
+    display: inline-flex;
+}
+
+.graphick__right {
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    background-color: var(--cw);
+}
+
+.graphick__title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.graphick__body {
+    margin-top: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.graphick__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.graphick__name {
+    width: 9.75em;
+    min-width: 9.75rem;
+    padding-right: 1rem;
+    text-align: right;
+    color: var(--ct);
+}
+
+.graphick__val {
+    padding-left: 1rem;
+    width: 2.25rem;
+    min-width: 2.25rem;
+    font-weight: 500;
+    color: var(--cb);
+}
+
+.graphick__linecont {
+    height: 3.5rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &::after,
+    &::before {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        position: absolute;
+        background-color: var(--cb);
+        opacity: 0.25;
+    }
+
+    &::before {
+        height: 0.125rem;
+        left: 0;
+        width: 100%;
+    }
+
+    &::after {
+        width: 0.125rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+    }
+}
+
+.graphick__line {
+    border-radius: 0.75rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cb2);
+    z-index: 3;
+}
+
+.gtaphick__after {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 0.875em;
+    line-height: 1.25rem;
+    border-top: 1px solid var(--cbor);
+    text-align: center;
+}
+
+.graphick__slidercont {
+    margin-top: 1.5rem;
+}
+
+.graphick__carousell {
+    margin-top: 1rem;
+    padding-right: 1.5rem;
+    position: relative;
+    &::before {
+        width: 2rem;
+        transform: translateX(-100%);
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--cbg);
+        z-index: 5;
+    }
+
+    .splide__track {
+        overflow: visible;
+    }
+
+    .splide__slide {
+        border-radius: 1rem;
+        padding: 1rem 0.75rem;
+        border: 1px solid var(--cbor);
+        background-color: var(--cw);
+
+        h4 {
+            margin-top: 0.5em;
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    .splide__arrows {
+        margin-top: 1.5rem;
+        gap: 1rem;
+        margin-right: -1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+        &::before {
+            right: 8.5rem;
+            height: 1px;
+            left: 0;
+            background-color: var(--cg);
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .splide__arrow {
+            width: 3rem;
+            height: 3rem;
+            background-size: 1.5rem;
+            border: 1px solid var(--cbor);
+            border-radius: 50%;
+            margin: 0;
+            position: static;
+            background-color: var(--cw);
+            opacity: 1;
+            transform: none;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: .3s;
+
+            &:hover {
+                box-shadow: var(--s1);
+                transform: scale(0.8);
+            }
+
+            &.prev {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 12L13.2973 4.5L15 6.25L9.40541 12L15 17.75L13.2973 19.5L6 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+
+            &.next {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 12L10.7027 19.5L9 17.75L14.5946 12L9 6.25L10.7027 4.5L18 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
+
+.graphick__slnum {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: var(--cb);
+}
+
+.graphick__countries {
+    margin-top: 3rem;
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+
+.graphick__ctrlist {
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+
+    li {
+        gap: 0.25rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        img {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 2rem;
+            border: 1px solid var(--cbor);
+            box-sizing: inherit;
+            overflow: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .graphick__part {
+        .study__bottom {
+            margin-top: 1.5rem;
+        }
+    }
+    .graphick__content {
+        margin-top: 2rem;
+        padding: 1.5rem 1rem;
+        border-radius: 1rem;
+    }
+    .graphick__main {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            br {
+                display: none;
+            }
+        }
+    }
+    .graphick__tag {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .graphick__right {
+        width: 100%;
+        border-radius: 0.75rem;
+        padding: 1rem 0.75rem;
+    }
+    .graphick__title {
+        text-align: left;
+    }
+    .graphick__name {
+        width: 7.5rem;
+        min-width: 7.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 500;
+    }
+    .graphick__val {
+        padding-left: 0.75rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+    .graphick__linecont {
+        height: 2.5rem;
+        &::after {
+            height: 1.5rem;
+        }
+    }
+    .graphick__line {
+        border-radius: 0.5rem;
+    }
+    .gtaphick__after {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 0.75em;
+        line-height: 1rem;
+    }
+    .graphick__slidercont {
+        margin-top: 3rem;
+    }
+    .graphick__carousell {
+        padding-right: 4.5rem;
+        &::before {
+            width: 1rem;
+        }
+        .splide__slide {
+            border-radius: 1rem;
+        }
+        .splide__arrows {
+            gap: 0.75rem;
+            margin-right: -4.5rem;
+            &::before {
+                right: 7.75rem;
+            }
+            .splide__arrow {
+                width: 2.75rem;
+                height: 2.75rem;
+                background-size: 1.25rem;
+                box-shadow: none !important;
+                transform: scale(1) !important;
+            }
+        }
+    }
+    .graphick__countries {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .graphick__name {
+        width: 6rem;
+        min-width: 6rem;
+    }
+}

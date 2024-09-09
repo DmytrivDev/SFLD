@@ -76,3 +76,15 @@
 
 /* Text */
 @import url('./sections/general/text.scss');
+
+/* Studies */
+@import url('./sections/studies/studies.scss');
+@import url('./sections/studies/studymain.scss');
+@import url('./sections/studies/studycontent.scss');
+@import url('./sections/studies/infogtaph.scss');
+@import url('./sections/studies/graphick.scss');
+@import url('./sections/studies/map.scss');
+@import url('./sections/studies/insight.scss');
+@import url('./sections/studies/present.scss');
+@import url('./sections/studies/partners.scss');
+@import url('./sections/studies/reviews.scss');

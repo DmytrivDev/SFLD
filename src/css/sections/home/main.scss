@@ -101,6 +101,7 @@
     height: calc(100vh - 5.5rem);
     max-height: 60vw;
     padding-bottom: 5rem;
+    min-height: 45rem;
     display: flex;
     align-items: flex-end;
     align-content: flex-end;
@@ -150,7 +151,7 @@
         top: 0;
         background: var(--grdh);
         opacity: 0;
-        transition: .3s;
+        transition: 0.3s;
     }
 
     span {

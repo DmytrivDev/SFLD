@@ -89,9 +89,51 @@
     right: 0;
 }
 
+@media screen and (min-width: 960px) {
+    .author__headingcont {
+        &.blogAuthorHeading {
+            padding-top: 1.5rem !important;
+    
+            .author__heading {
+                padding-left: 6.813rem;
+                align-items: center;
+                align-content: center;
+    
+                .bi__avatarcont {
+                    left: 1.813em;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 4rem;
+                    height: 4rem;
+                }
+        
+                .bi__flag {
+                    width: 1rem;
+                    height: 1rem;
+                    bottom: 0;
+                    right: 0;
+                }
+        
+                h3 {
+                    font-size: 1.5rem;
+                }
+        
+                p {
+                    font-size: 0.875rem;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width: 960px) {
     .blog__content {
         margin-top: 6rem;
+    }
+    .blogAuthorHeading {
+        padding-top: 5rem !important;
     }
     .section__author {
         .blog__content {

@@ -28,6 +28,13 @@
                 width: 1.5rem;
                 height: 1.5rem;
                 display: block;
+                transiyion: .3s;
+            }
+
+            &:hover {
+                img {
+                    filter: invert(20%) sepia(8%) saturate(624%) hue-rotate(189deg) brightness(100%) contrast(86%);
+                }
             }
         }
     }
@@ -48,6 +55,16 @@
         & > li {
             min-width: 13.43rem;
             margin-bottom: 0.75rem;
+
+            a {
+                transition: .3s;
+            }
+
+            a {
+                &:hover {
+                    color: var(--cw) !important;
+                }
+            }
 
             &.footerctrl {
                 li {
@@ -114,6 +131,21 @@
     }
 }
 
+@media screen and (min-width: 960px) {
+    .hovered ul {
+        & > li {
+            & > a {
+                color: rgba(146, 152, 173, 1);
+            }
+
+            li {
+                a {
+                    color: rgba(78, 84, 104, 1) !important;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 960px) {
     .footer {
         padding-top: 1.5rem;

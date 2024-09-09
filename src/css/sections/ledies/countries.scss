@@ -7,7 +7,7 @@
     height: 3.2rem;
     overflow: hidden;
 
-    .hideItem { 
+    .hideItem {
         display: none;
     }
 
@@ -53,8 +53,7 @@
     transition: 0.3s;
 
     &:hover {
-        border-color: var(--cbor);
-        box-shadow: var(--s1);
+        border-color: var(--cb);
     }
 
     &:disabled {
@@ -124,7 +123,7 @@
             }
 
             &:hover {
-                box-shadow: var(--s1);
+                border-color: var(--cb);
             }
 
             &::before {
@@ -134,7 +133,7 @@
                 bottom: 0;
                 top: 0;
                 z-index: 1;
-                content: '';
+                content: "";
             }
 
             &::after {
@@ -264,6 +263,7 @@
         min-width: 2rem;
         height: 2rem;
         border-radius: 50%;
+        color: var(--cm) !important;
         position: relative;
         overflow: hidden;
     }
@@ -425,7 +425,7 @@
     overflow: hidden;
 
     .country__imginner {
-        padding-top: 100%;
+        padding-top: 125%;
     }
 }
 
@@ -475,6 +475,7 @@
     display: inline-flex;
     align-items: center;
     align-content: center;
+    transition: 0.3s;
 
     &::after {
         width: 1rem;
@@ -483,7 +484,15 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
+        transition: 0.3s;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4.19617 11.7628L3.5 11.0667L10.0603 4.5H4.09617V3.5H11.7628V11.1667H10.7628V5.2025L4.19617 11.7628Z' fill='%231F2129'/%3E%3C/svg%3E");
+    }
+
+    &:hover {
+        color: rgba(95, 102, 126, 1);
+        &::after {
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.19617 11.7628L3.5 11.0667L10.0603 4.5H4.09617V3.5H11.7628V11.1667H10.7628V5.2025L4.19617 11.7628Z' fill='%235F667E'/%3E%3C/svg%3E%0A");
+        }
     }
 }
 
@@ -497,6 +506,14 @@
             height: 2rem;
             position: relative;
             display: block;
+            img {
+                transition: 0.3s;
+            }
+            &:hover {
+                img {
+                    filter: invert(65%) sepia(11%) saturate(455%) hue-rotate(189deg) brightness(91%) contrast(91%);
+                }
+            }
         }
     }
 }
@@ -652,7 +669,7 @@
         display: flex;
         flex-direction: column;
         overflow: auto;
-        transition: .3s;
+        transition: 0.3s;
         .country__activefilters {
             height: 3.3rem;
             min-height: 3.3rem;
@@ -769,7 +786,7 @@
 @media screen and (max-width: 500px) {
     .country__img {
         .country__imginner {
-            padding-top: 148.8%;
+            padding-top: 125%;
         }
     }
 }

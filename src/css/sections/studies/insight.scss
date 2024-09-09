@@ -1,0 +1,132 @@
+.insight__content {
+    margin-top: 2.25rem;
+}
+
+.insight__carousell {
+    padding-right: 7rem;
+
+    .splide__track {
+        overflow: visible;
+    }
+
+    .splide__slide {
+        border-radius: 0.75rem;
+        padding: 1rem;
+        padding-bottom: 1.5rem;
+        border: 1px solid var(--cg);
+        background-color: var(--cw);
+
+        h5 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+            color: var(--cl);
+        }
+    }
+
+    .splide__arrows {
+        margin-top: 2rem;
+        gap: 1rem;
+        margin-right: -7rem;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+        &::before {
+            right: 8.5rem;
+            height: 1px;
+            left: 0;
+            background-color: var(--cg);
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .splide__arrow {
+            width: 3rem;
+            height: 3rem;
+            background-size: 1.5rem;
+            border: 1px solid var(--cbor);
+            border-radius: 50%;
+            margin: 0;
+            position: static;
+            background-color: var(--cw);
+            opacity: 1;
+            transform: none;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: .3s;
+
+            &:hover {
+                box-shadow: var(--s1);
+                transform: scale(0.8);
+            }
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: inherit;
+                box-shadow: none !important;
+                transform: scale(1) !important;
+            }
+
+            &.prev {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 12L13.2973 4.5L15 6.25L9.40541 12L15 17.75L13.2973 19.5L6 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+
+            &.next {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M18 12L10.7027 19.5L9 17.75L14.5946 12L9 6.25L10.7027 4.5L18 12Z' fill='%231F2129'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
+
+.insight__text {
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 960px) {
+    .insight__part {
+        .study__heading {
+            padding-right: 6rem;
+        }
+    }
+    .insight__content {
+        margin-top: 1.88rem;
+    }
+    .insight__carousell {
+        padding-right: 0;
+        .splide__slide {
+            padding: 1rem;
+            h5 {
+                font-size: .875rem;
+                line-height: 1.25rem;
+            }
+        }
+        .splide__arrows {
+            right: 0;
+            top: -1.5rem;
+            transform: translateY(-100%);
+            position: absolute;
+            margin-top: 0;
+            gap: .75rem;
+            margin-right: 0;
+            &::before {
+                display: none;
+            }
+            .splide__arrow {
+                width: 2.75rem;
+                height: 2.75rem;
+                background-size: 1.25rem;
+                box-shadow: none !important;
+                transform: scale(1) !important;
+            }
+        }
+    }
+    .insight__text {
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}

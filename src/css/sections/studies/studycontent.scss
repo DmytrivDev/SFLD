@@ -1,0 +1,52 @@
+.study__content {
+    padding: 0 7rem;
+    padding-top: 8rem;
+    gap: 8rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.study__heading {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    a {
+        margin-left: 1.5rem;
+        top: 0.35rem;
+        position: relative;
+        white-space: nowrap;
+    }
+}
+
+.study__text {
+    margin-top: 2rem;
+}
+
+.study__news {
+    .section__heading {
+        h2 {
+            max-width: 42rem;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .study__content {
+        padding: 0;
+        padding-top: 6rem;
+        gap: 6rem;
+    }
+    .study__heading {
+        h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        a {
+            display: none;
+        }
+    }
+    .study__text {
+        margin-top: 1.5rem;
+    }
+}

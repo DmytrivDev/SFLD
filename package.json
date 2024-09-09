@@ -20,6 +20,7 @@
   "author": "Andrii Dmytriv",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@splidejs/splide": "^4.1.4",
     "accordion-js": "^3.3.4",
     "axios": "^1.7.2",
